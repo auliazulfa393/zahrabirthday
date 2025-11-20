@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Zahrotul Aula (Mbull)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Caveat:wght@400;600;700&family=Patrick+Hand&family=Indie+Flower&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Patrick Hand', cursive;
+        text-align: center;
+        overflow-x: hidden;
+        background-image: url('https://files.catbox.moe/9f4g87.png');
+        background-size: 160px;
+        background-repeat: repeat;
+        animation: bgMove 18s linear infinite;
+        cursor: url('https://cdn-icons-png.flaticon.com/512/742/742751.png') 16 16, auto;
+    }
+
+    @keyframes bgMove {
+        0% { background-position: 0 0; }
+        100% { background-position: 300px 300px; }
+    }
+
+    /* Floating Hearts */
+    .floating-loves {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .floating-loves span {
+        position: absolute;
+        font-size: 26px;
+        animation: loveFloat 7s linear infinite;
+        opacity: 0.55;
+        color: #ff8fb0;
+    }
+
+    .floating-loves span:nth-child(1){left:10%;animation-duration:8s;}
+    .floating-loves span:nth-child(2){left:25%;animation-duration:7s;animation-delay:1s;}
+    .floating-loves span:nth-child(3){left:40%;animation-duration:9s;animation-delay:0.5s;}
+    .floating-loves span:nth-child(4){left:55%;animation-duration:6s;animation-delay:1.8s;}
+    .floating-loves span:nth-child(5){left:70%;animation-duration:10s;animation-delay:1.2s;}
+    .floating-loves span:nth-child(6){left:82%;animation-duration:7.5s;animation-delay:0.4s;}
+    .floating-loves span:nth-child(7){left:15%;animation-duration:9.5s;animation-delay:2.2s;}
+    .floating-loves span:nth-child(8){left:47%;animation-duration:8.3s;animation-delay:1.5s;}
+    .floating-loves span:nth-child(9){left:63%;animation-duration:7.7s;animation-delay:2s;}
+
+    @keyframes loveFloat {
+        0% { transform: translateY(110vh) scale(0.8); opacity: 0; }
+        20% { opacity: 0.8; }
+        100% { transform: translateY(-20vh) scale(1.4); opacity: 0; }
+    }
+
+    /* Kawaii Stickers */
+    .floating-kawaii {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .floating-kawaii span {
+        position: absolute;
+        font-size: 34px;
+        animation: kawaiiFloat 8s linear infinite;
+        opacity: 0.7;
+    }
+
+    .floating-kawaii span:nth-child(1){left:5%;animation-delay:1s;}
+    .floating-kawaii span:nth-child(2){left:25%;animation-delay:3s;}
+    .floating-kawaii span:nth-child(3){left:60%;animation-delay:2s;}
+    .floating-kawaii span:nth-child(4){left:80%;animation-delay:4s;}
+    .floating-kawaii span:nth-child(5){left:45%;animation-delay:0s;}
+
+    @keyframes kawaiiFloat {
+        0% { transform: translateY(120vh) scale(0.6); opacity: 0; }
+        20% { opacity: 1; }
+        100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+    }
+
+    /* SECTION */
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        transition: opacity 0.6s ease;
+        position: relative;
+        z-index: 10;
+    }
+
+    h1, h2, p {
+        color: #ff4f86;
+        animation: fadeIn 1.5s ease forwards;
+        opacity: 0;
+    }
+
+     h1 {
+        font-size: 42px;
+        font-weight: 700;
+        font-family: 'Caveat', cursive;
+        animation: fadeIn 1.5s ease forwards;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+        font-family: 'Caveat', cursive;
+    }
+    @keyframes glow {
+        from { text-shadow: 0 0 6px #ff8bbd, 0 0 14px #ff6fa8; }
+        to   { text-shadow: 0 0 12px #ff4f9b, 0 0 22px #ff2f89; }
+    }
+
+    @keyframes fadeIn {
+        to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; transform: translateY(15px); }
+    }
+
+    p { 
+        font-size: 19px; 
+        max-width: 460px;
+        line-height: 1.6;
+    }
+
+    /* ========== MUSIC PLAYER ========== */
+    .music-player {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: white;
+        padding: 12px 20px;
+        border-radius: 50px;
+        box-shadow: 0 6px 20px rgba(255,105,180,0.3);
+        transition: all 0.3s ease;
+        opacity: 0;
+        animation: fadeInPlayer 1s ease forwards 2s;
+    }
+
+    @keyframes fadeInPlayer {
+        to { opacity: 1; }
+    }
+
+    .music-player:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255,105,180,0.4);
+    }
+
+    .music-btn {
+        background: linear-gradient(135deg, #ff8fb0 0%, #ff6e9e 100%);
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(255,105,180,0.3);
+    }
+
+    .music-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(255,105,180,0.5);
+    }
+
+    .music-btn:active {
+        transform: scale(0.95);
+    }
+
+    .music-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .music-title {
+        font-size: 14px;
+        color: #ff4f86;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .music-status {
+        font-size: 12px;
+        color: #ff8fb0;
+        margin: 0;
+    }
+
+    .music-wave {
+        display: flex;
+        gap: 3px;
+        height: 20px;
+        align-items: flex-end;
+    }
+
+    .music-wave span {
+        width: 3px;
+        background: linear-gradient(to top, #ff8fb0, #ff6e9e);
+        border-radius: 3px;
+        animation: wave 0.8s ease-in-out infinite;
+    }
+
+    .music-wave span:nth-child(1) { animation-delay: 0s; }
+    .music-wave span:nth-child(2) { animation-delay: 0.1s; }
+    .music-wave span:nth-child(3) { animation-delay: 0.2s; }
+    .music-wave span:nth-child(4) { animation-delay: 0.3s; }
+
+    @keyframes wave {
+        0%, 100% { height: 8px; }
+        50% { height: 20px; }
+    }
+
+    .music-wave.paused span {
+        animation: none;
+        height: 8px;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+        .music-player {
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+        }
+        
+        .music-info {
+            display: none;
+        }
+    }
+
+    .btn {
+        padding: 12px 26px;
+        background: #ff8fb0;
+        color: white;
+        border: none;
+        border-radius: 14px;
+        font-size: 18px;
+        margin-top: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .btn:hover { background: #ff6e9e; transform: scale(1.06); }
+
+    .gift-bounce { animation: bounce 1.3s infinite ease-in-out; }
+    @keyframes bounce { 0%{transform:translateY(0);} 50%{transform:translateY(-10px);} 100%{transform:translateY(0);} }
+
+    /* Polaroid Wall */
+    .polaroid-wall {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 900px;
+        width: 90%;
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .polaroid {
+        background: white;
+        padding: 12px 12px 45px 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+        animation: polaroidFadeIn 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    /* Washi Tape Effect */
+    .polaroid::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 20px;
+        background: repeating-linear-gradient(
+            45deg,
+            rgba(255, 182, 193, 0.6),
+            rgba(255, 182, 193, 0.6) 10px,
+            rgba(255, 218, 224, 0.6) 10px,
+            rgba(255, 218, 224, 0.6) 20px
+        );
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .polaroid::after {
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        right: -8px;
+        width: 30px;
+        height: 70%;
+        background: repeating-linear-gradient(
+            -45deg,
+            rgba(173, 216, 230, 0.5),
+            rgba(173, 216, 230, 0.5) 8px,
+            rgba(176, 224, 230, 0.5) 8px,
+            rgba(176, 224, 230, 0.5) 16px
+        );
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .polaroid:nth-child(1) {
+        transform: rotate(-5deg);
+        animation-delay: 0.1s;
+    }
+
+    .polaroid:nth-child(2) {
+        transform: rotate(3deg);
+        animation-delay: 0.3s;
+    }
+
+    .polaroid:nth-child(3) {
+        transform: rotate(-2deg);
+        animation-delay: 0.5s;
+    }
+
+    .polaroid:nth-child(4) {
+        transform: rotate(4deg);
+        animation-delay: 0.7s;
+    }
+
+    .polaroid:nth-child(5) {
+        transform: rotate(-3deg);
+        animation-delay: 0.9s;
+    }
+
+    @keyframes polaroidFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px) rotate(0deg);
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .polaroid:hover {
+        transform: scale(1.1) rotate(0deg) !important;
+        box-shadow: 0 15px 35px rgba(255,105,180,0.4);
+        z-index: 100;
+    }
+
+    /* Ukuran polaroid SAMA untuk semua */
+.polaroid {
+    width: 220px;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Container foto seragam */
+.polaroid-img-container {
+    width: 100%;
+    height: 260px; /* ini bikin semua sama */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Foto di dalam seragam */
+.polaroid-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* bikin pas tanpa distorsi */
+}
+
+/* Caption tetap */
+.polaroid-caption {
+    margin-top: 8px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+    /* Stiker di Polaroid */
+    .polaroid-sticker {
+        position: absolute;
+        font-size: 30px;
+        z-index: 10;
+        filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+    }
+
+    .polaroid-sticker.top-left {
+        top: -12px;
+        left: -12px;
+        animation: stickerBounce1 2.5s ease-in-out infinite;
+    }
+
+    .polaroid-sticker.top-right {
+        top: -12px;
+        right: -12px;
+        animation: stickerBounce2 2.8s ease-in-out infinite;
+    }
+
+    .polaroid-sticker.bottom-left {
+        bottom: 30px;
+        left: -12px;
+        animation: stickerBounce3 3s ease-in-out infinite;
+    }
+
+    .polaroid-sticker.bottom-right {
+        bottom: 30px;
+        right: -12px;
+        animation: stickerBounce4 2.6s ease-in-out infinite;
+    }
+
+    @keyframes stickerBounce1 {
+        0%, 100% { transform: translateY(0px) rotate(-8deg); }
+        50% { transform: translateY(-6px) rotate(8deg); }
+    }
+
+    @keyframes stickerBounce2 {
+        0%, 100% { transform: translateY(0px) rotate(8deg); }
+        50% { transform: translateY(-6px) rotate(-8deg); }
+    }
+
+    @keyframes stickerBounce3 {
+        0%, 100% { transform: translateY(0px) rotate(-5deg); }
+        50% { transform: translateY(-5px) rotate(5deg); }
+    }
+
+    @keyframes stickerBounce4 {
+        0%, 100% { transform: translateY(0px) rotate(5deg); }
+        50% { transform: translateY(-5px) rotate(-5deg); }
+    }
+
+    /* Modal Zoom Foto */
+    .photo-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .photo-modal.active {
+        display: flex;
+    }
+
+    .photo-modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        position: relative;
+        animation: zoomIn 0.4s ease;
+    }
+
+    @keyframes zoomIn {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .photo-modal img {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 12px;
+        box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+    }
+
+    .photo-modal-caption {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+    .close-photo {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: #ff8fb0;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .close-photo:hover {
+        background: #ff6e9e;
+        transform: rotate(90deg);
+    }
+
+    .cute-title {
+        font-size: 28px;
+        color: #e273a6;
+        margin: 10px 0 25px;
+        font-weight: 700;
+    }
+
+    .message-box {
+        width: 80%;
+        max-width: 600px;
+        background: white;
+        border-radius: 22px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height .7s ease, padding .4s ease;
+    }
+
+    .message-box.open {
+        max-height: 350px;
+        padding: 20px;
+    }
+
+    .message-content {
+        max-height: 290px;
+        overflow-y: auto;
+        text-align: left;
+        font-size: 16px;
+        color: #444;
+        line-height: 1.5;
+    }
+
+    /* ========== WISH WALL STYLES ========== */
+    .wish-wall {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+        max-width: 600px;
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .wish-note {
+        background: linear-gradient(135deg, #fff9e6 0%, #ffe8f5 100%);
+        border-radius: 8px;
+        padding: 20px 15px;
+        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.25);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #ffd6e5;
+    }
+
+    .wish-note:hover {
+        transform: translateY(-8px) rotate(2deg);
+        box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+    }
+
+    .wish-note.opened {
+        background: white;
+        border-color: #ff8fb0;
+    }
+
+    .wish-icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .wish-label {
+        font-size: 14px;
+        color: #ff4f86;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .wish-text {
+        display: none;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+        text-align: center;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .wish-note.opened .wish-icon,
+    .wish-note.opened .wish-label {
+        display: none;
+    }
+
+    .wish-note.opened .wish-text {
+        display: block;
+    }
+
+    /* Modal for wishes */
+    .wish-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .wish-modal.active {
+        display: flex;
+    }
+
+    .wish-modal-content {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        position: relative;
+        animation: scaleIn 0.4s ease;
+    }
+
+    @keyframes scaleIn {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .wish-modal-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .wish-modal-title {
+        color: #ff4f86;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .wish-modal-text {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .close-modal {
+        background: #ff8fb0;
+        color: white;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .close-modal:hover {
+        background: #ff6e9e;
+        transform: scale(1.05);
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Music Player -->
+<div class="music-player">
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+        <span id="musicIcon">🎵</span>
+    </button>
+    <div class="music-info">
+        <p class="music-title">Birthday Song</p>
+        <div class="music-wave" id="musicWave">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Loves -->
+<div class="floating-loves">
+    <span>💗</span><span>💕</span><span>💖</span><span>💞</span><span>💘</span>
+    <span>💗</span><span>💕</span><span>💖</span><span>💞</span>
+</div>
+
+<!-- Floating Kawaii Stickers -->
+<div class="floating-kawaii">
+    <span>⭐</span>
+    <span>🧁</span>
+    <span>🧸</span>
+    <span>⭐</span>
+    <span>🧁</span>
+</div>
+
+<!-- PAGE 1 -->
+<section id="page1">
+    <h1>Happy Birthday Zahratul Aula! 🎀</h1>
+    <p>Tap yang dibawah yang mbull</p>
+
+    <div class="gift-bounce">
+        <div class="tenor-gif-embed" data-postid="17252662110527061286" data-share-method="host" data-aspect-ratio="1" data-width="200px"></div>
+        <script async src="https://tenor.com/embed.js"></script>
+    </div>
+
+    <button class="btn" onclick="goTo('page2')">Tap di sini 🎁</button>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2" style="display:none;">
+    <div class="tenor-gif-embed" data-postid="16161260235683800785" data-share-method="host" data-aspect-ratio="1" data-width="180px"></div>
+
+    <h2>Allo bocill👋</h2>
+    <p>Makasi udah mau kenalan sama aku sampe sejauh ini ya, jangan pernah berubah ya cil!</p>
+
+    <button class="btn" onclick="goTo('page3')">Buka suratnya ✉️</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3" style="display:none;">
+    <div class="tenor-gif-embed bounce-gif"
+        data-postid="16942659129016571369"
+        data-share-method="host"
+        data-aspect-ratio="1"
+        data-width="180px"></div>
+
+    <h2 class="cute-title">cieee ulang tahun bebekk satu ini🐣</h2>
+
+    <div class="message-box" id="msgBox">
+        <div class="message-content">
+            happy birthday mbull, semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya.
+            mbull tahun ini umurnya bertambah satu, semoga kamu sehat selalu, makin dewasa yaa cantikk,
+            makin bahagiaaa, makin gemessh, dan tetap jadi diri sendiri! Kalo ada apa-apa jangan pernah ragu buat cerita ke aku yaa mbull🤍
+            <br><br>
+            Semangatt terus yaa buat belajar dan ngeraih cita cita mbull, mbull bilang mau ke SMA/SMK impian mbull kan? terus mau kuliah kedokteran abis itu nanti bisa ke jepang(?)aamiin. 
+            Setiap langkah mbull pasti selalu ada rintangannya, bolongannya, cobaannya, tapi mbull harus tetep berusaha biar mbull bisa maju terus ke depan. Kecewa bole, sedih bole, tapi ndaa boleh lama lama yaa cantikkk
+            Harus diinget itu yaa cil!🤏
+        </div>
+    </div>
+
+    <button class="btn" onclick="openCard()">Buka Ucapan 🎀</button>
+    <button class="btn" onclick="goTo('pageWishWall')">Lanjut ❤️</button>
+</section>
+
+<!-- WISH WALL PAGE -->
+<section id="pageWishWall" style="display:none;">
+    <h2>Dinding Harapan 🌟</h2>
+    <p>Klik setiap kertas untuk baca ucapannya 💕</p>
+
+    <div class="wish-wall">
+        <div class="wish-note" onclick="openWish(0)">
+            <div class="wish-icon">💖</div>
+            <div class="wish-label">Ucapan 1</div>
+            <div class="wish-text">Semoga kamu selalu bahagia dan tersenyum setiap hari!</div>
+        </div>
+
+        <div class="wish-note" onclick="openWish(1)">
+            <div class="wish-icon">🌸</div>
+            <div class="wish-label">Ucapan 2</div>
+            <div class="wish-text">Sehat selalu ya mbull, jangan lupa jaga diri!</div>
+        </div>
+
+        <div class="wish-note" onclick="openWish(2)">
+            <div class="wish-icon">✨</div>
+            <div class="wish-label">Ucapan 3</div>
+            <div class="wish-text">Makin cantik, makin gemesh, makin dewasa ya mbull!</div>
+        </div>
+
+        <div class="wish-note" onclick="openWish(3)">
+            <div class="wish-icon">🎀</div>
+            <div class="wish-label">Ucapan 4</div>
+            <div class="wish-text">Terima kasih sudah jadi orang yang menyenangkan!</div>
+        </div>
+
+        <div class="wish-note" onclick="openWish(4)">
+            <div class="wish-icon">💝</div>
+            <div class="wish-label">Ucapan 5</div>
+            <div class="wish-text">Semoga semua impianmu tercapai tahun ini!</div>
+        </div>
+
+        <div class="wish-note" onclick="openWish(5)">
+            <div class="wish-icon">🌈</div>
+            <div class="wish-label">Ucapan 6</div>
+            <div class="wish-text">Dikelilingi orang-orang baik selalu ya sayang!</div>
+        </div>
+    </div>
+
+    <button class="btn" onclick="goTo('page4')" style="margin-top: 30px;">Lanjut ke Foto 📸</button>
+</section>
+
+<!-- PAGE 4 -->
+<section id="page4" style="display:none;">
+    <h2>It's Yourday Mbull Kicikkk 💕</h2>
+    <p style="font-size: 16px;">Klik fotonya mbull buat di zoom!</p>
+
+    <div class="polaroid-wall">
+        <!-- Photo 1: Tema Sweet & Cute -->
+        <div class="polaroid" onclick="openPhoto(0)">
+            <span class="polaroid-sticker top-left">🧁</span>
+            <span class="polaroid-sticker top-right">💕</span>
+            <div class="polaroid-img-container">
+                <img src="mbull1.jpg" alt="Memory 1">
+            </div>
+            <div class="polaroid-caption">ini pap pertama mbull ke aku ♡</div>
+        </div>
+
+       <!-- Photo 2: Tema Soft & Dreamy -->
+<div class="polaroid" onclick="openPhoto(1)">
+    <span class="polaroid-sticker top-left">✨</span>
+    <span class="polaroid-sticker top-right">🌸</span>
+    <div class="polaroid-img-container">
+        <img src="mbull2.jpg" alt="Memory 2">
+    </div>
+    <div class="polaroid-caption">ini foto mbull yang paling dewasa waktu pertama kali pap ke aku</div>
+</div>
+
+
+        <!-- Photo 3: Tema Playful Animals -->
+        <div class="polaroid" onclick="openPhoto(2)">
+            <span class="polaroid-sticker top-left">🐻</span>
+            <span class="polaroid-sticker top-right">🐣</span>
+            <span class="polaroid-sticker bottom-left">🧸</span>
+            <div class="polaroid-img-container">
+                <img src="mbull3.jpg" alt="Memory 3">
+            </div>
+            <div class="polaroid-caption">plisss disini mbull cantiknya tuuu bedaaaa♡</div>
+        </div>
+
+        <!-- Photo 4: Tema Love & Hearts -->
+        <div class="polaroid" onclick="openPhoto(3)">
+            <span class="polaroid-sticker top-left">💖</span>
+            <span class="polaroid-sticker top-right">💝</span>
+            <span class="polaroid-sticker bottom-right">💕</span>
+            <div class="polaroid-img-container">
+                <img src="mbull4.jpg" alt="Memory 4">
+            </div>
+            <div class="polaroid-caption">kalo disini mbull lucuuu🧏‍♀️</div>
+        </div>
+
+        <!-- Photo 5: Tema Party & Celebration (Special!) -->
+        <div class="polaroid" onclick="openPhoto(4)">
+            <span class="polaroid-sticker top-left">🎀</span>
+            <span class="polaroid-sticker top-right">⭐</span>
+            <span class="polaroid-sticker bottom-left">🎂</span>
+            <span class="polaroid-sticker bottom-right">🎉</span>
+            <div class="polaroid-img-container">
+                <img src="mbull5.jpg" alt="Memory 5">
+            </div>
+            <div class="polaroid-caption">cantikk banget sih cil</div>
+        </div>
+    </div>
+
+    <button class="btn" onclick="goTo('page5')" style="margin-top: 30px;">Lanjut 🎉</button>
+</section>
+
+<!-- Photo Zoom Modal -->
+<div class="photo-modal" id="photoModal">
+    <div class="photo-modal-content">
+        <button class="close-photo" onclick="closePhotoModal()">×</button>
+        <img id="modalPhoto" src="" alt="Zoomed Photo">
+        <div class="photo-modal-caption" id="modalPhotoCaption"></div>
+    </div>
+</div>
+
+<!-- PAGE 5 -->
+<section id="page5" style="display:none;">
+    <h2>Terakhir…</h2>
+    <p>Terima kasih sudah jadi orang yang baik & lucu. Semoga kamu selalu dikelilingi kebahagiaan 💕</p>
+    <h2>Happy Birthday, Zahrotul Aula (Mbull)! 🎂✨</h2>
+</section>
+
+<!-- Wish Modal -->
+<div class="wish-modal" id="wishModal">
+    <div class="wish-modal-content">
+        <div class="wish-modal-icon" id="modalIcon">💖</div>
+        <div class="wish-modal-title" id="modalTitle">Ucapan Spesial</div>
+        <div class="wish-modal-text" id="modalText"></div>
+        <button class="close-modal" onclick="closeWishModal()">Tutup ❤️</button>
+    </div>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" src="lagu.mp3" preload="auto"></audio>
+
+
+<script>
+    // Music auto-play when first click
+    document.body.addEventListener("click", () => {
+        const music = document.getElementById("music");
+        music.volume = 0.6;
+        music.play().catch(()=>{});
+    }, { once: true });
+
+    // Page switch
+    function goTo(id) {
+        document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+        const target = document.getElementById(id);
+        target.style.display = "flex";
+        target.style.opacity = 0;
+        setTimeout(()=> target.style.opacity = 1, 50);
+    }
+
+    // Photo data untuk polaroid wall
+    const photos = [
+        { img: "mbull1.jpg", caption: " bebekkk 🐣" },
+        { img: "mbull2.jpg", caption: "always smiling 🌸" },
+        { img: "mbull3.jpg", caption: "my favorite ♡" },
+        { img: "mbull4.jpg", caption: "gemeshhh 🧏‍♀️" },
+        { img: "mbull5.jpg", caption: "cantikk!! ♡" }
+    ];
+
+    // Open photo in modal
+    function openPhoto(index) {
+        const photo = photos[index];
+        document.getElementById('modalPhoto').src = photo.img;
+        document.getElementById('modalPhotoCaption').textContent = photo.caption;
+        document.getElementById('photoModal').classList.add('active');
+    }
+
+    // Close photo modal
+    function closePhotoModal() {
+        document.getElementById('photoModal').classList.remove('active');
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('photoModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closePhotoModal();
+        }
+    });
+
+    // Open card
+    function openCard() {
+        const box = document.getElementById('msgBox');
+        box.classList.toggle('open');
+    }
+
+    // Wish Wall Data
+    const wishes = [
+        { icon: "💖", title: "Harapan Pertama", text: "Semoga kamu selalu bahagia dan tersenyum setiap hari! Jangan pernah berhenti jadi diri sendiri yang lucu dan menggemaskan 🫶" },
+        { icon: "🌸", title: "Doa Kesehatan", text: "Sehat selalu ya mbull, jangan lupa jaga diri, makan yang teratur, minum air putih yang banyak mbull dan  istirahat yang cukup biar kuat terus! 💪" },
+        { icon: "✨", title: "Makin Dewasa", text: "Makin cantik, makin gemesh, makin dewasa ya mbull! Tapi tetep jadi anak kecil yang lucu di depann aku 😆" },
+        { icon: "🎀", title: "Terima Kasih", text: "Terima kasih udah jadi orang yang menyenangkan! Makasih udah mau selalu cerita ke aku 💕" },
+        { icon: "💝", title: "Impian", text: "Semoga semua impianmu tercapai tahun ini! Apapun yang kamu mau, semoga Tuhan kasih jalan terbaik buat kamu ✨" },
+        { icon: "🌈", title: "Kebaikan", text: "Semoga selalu dikelilingi orang-orang baik ya mbull! Semoga kamu ketemu sama orang-orang yang bisa bikin kamu makin bahagia 🌟" }
+    ];
+
+    // Open wish in modal
+    function openWish(index) {
+        const wish = wishes[index];
+        document.getElementById('modalIcon').textContent = wish.icon;
+        document.getElementById('modalTitle').textContent = wish.title;
+        document.getElementById('modalText').textContent = wish.text;
+        document.getElementById('wishModal').classList.add('active');
+    }
+
+    // Close wish modal
+    function closeWishModal() {
+        document.getElementById('wishModal').classList.remove('active');
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('wishModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeWishModal();
+        }
+    });
+</script>
+
+</body>
+</html>
